@@ -1,13 +1,16 @@
 export type Task = {
-  id: string;
   created_at: string;
-  title: string;
-  user_id: string | undefined;
+  id: string;
+  title: string | null;
+  user_id: string | null;
 };
 
 export type Notice = {
-  id: string;
+  content: string | null;
   created_at: string;
-  content: string;
-  user_id: string | undefined;
+  id: string;
+  user_id: string | null;
 };
+
+export type EditedTask = Omit<Task, 'created_at' | 'user_id'>;
+export type EditedNotice = Omit<Notice, 'created_at' | 'user_id'>;
