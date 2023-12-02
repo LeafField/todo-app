@@ -90,4 +90,6 @@ export const useMutateTask = () => {
       },
     }
   );
+
+  return { createTaskMutation, deleteTaskMutation, updateTaskMutation };
 };
