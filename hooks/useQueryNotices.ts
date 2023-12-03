@@ -18,7 +18,7 @@ export const useQueryNotices = () => {
   return useQuery({
     queryKey: ['notices'],
     queryFn: getNotices,
-    staleTime: Infinity,
+    staleTime: 0,
     refetchOnWindowFocus: true,
   });
 };
